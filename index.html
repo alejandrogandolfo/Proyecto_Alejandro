@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="CODIGO_CSS/styles.css">
+    <!--CARRITO MEDIANTE FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Inicio</title>
+
+    <!--FONT DE GOOGLE PARA EL SUBTITULO DEL HEADER-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
+    <!--TERMINA EL FONT DE GOOGLE-->
+
+    <!--CAMBIO ICONO DE LA WEB-->
+    <link rel="icon" type="image/png" href="IMAGENES/CELIPLANET.png">
+</head>
+
+<body>
+    <div class="grid-container">
+        <!--COMIENZA EL HEADER-->
+        <header class="header">
+            <div class="titulo">
+                <h1>CELIPLANET</h1>
+                <p>soy celiaco, no extraterrestre</p>
+            </div>
+
+            <div class="logo">
+                <img src="IMAGENES/LOGO2.jpg" alt="Logo de CeliPlanet">
+            </div>
+
+            <!-- CHECKBOX HAMBURGUESA -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label> <!-- Icono de hamburguesa -->
+
+            <nav id="menu-principal">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="CODIGO_HTML/nosotros.html">NOSOTROS</a></li>
+                    <li><a href="CODIGO_HTML/recetas.html">RECETAS</a></li>
+                    <li><a href="CODIGO_HTML/comprar.html">COMO COMPRAR</a></li>
+                    <li><a href="CODIGO_HTML/encontranos.html">CONTACTANOS</a></li>
+                </ul>
+            </nav>
+
+            <div id="carrito">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </header>
+        <!--TERMINA EL HEADER-->
+
+        <!--COMIENZA EL MAIN-->
+        <main id="grid-main">
+            <aside class="categorias">
+                <h2>Categorias</h2>
+                <ul id="listado-cat">    
+                    <li>Aceites, Vinagres y semillas</li>
+                    <li>Bebidas</li>
+                    <li>Conservas</li>
+                    <li>Dulces</li>
+                    <li>Elaborados</li>
+                    <li>Panificados Dulces</li>
+                    <li>Panificados Salados</li>
+                    <li>Pastas</li>
+                    <li>Postres</li>
+                    <li>Embutidos</li>
+                </ul>
+            </aside>
+        
+            <section class="oferta">
+                <h2>Ofertas</h2>
+                <div class="Oferta">
+                    
+                    <img src="IMAGENES/alfajor.jpeg" alt="Descripción de la imagen">
+                    <img src="IMAGENES/alfajor.jpeg" alt="Descripción de la imagen">
+                    <img src="IMAGENES/alfajor.jpeg" alt="Descripción de la imagen">
+                    <img src="IMAGENES/alfajor.jpeg" alt="Descripción de la imagen">
+                    <img src="IMAGENES/alfajor.jpeg" alt="Descripción de la imagen">
+                    <img src="IMAGENES/alfajor.jpeg" alt="Descripción de la imagen">
+                    <img src="IMAGENES/alfajor.jpeg" alt="Descripción de la imagen">
+                    <img src="IMAGENES/alfajor.jpeg" alt="Descripción de la imagen">
+                    <img src="IMAGENES/alfajor.jpeg" alt="Descripción de la imagen">
+                    
+                </div>
+            </section>
+
+            <section class="novedades">
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="IMAGENES/OREO.jpg" class="d-block w-100" alt="Descripción de la imagen">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5 class="text-primary">ALFAJOR CELI</h5>
+                          <p class="text-success">PROMOCION COMPRANDO 5 UNIDADES</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="IMAGENES/OREO.jpg" class="d-block w-100" alt="Descripción de la imagen">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="IMAGENES/OREO.jpg" class="d-block w-100" alt="Descripción de la imagen">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>OREO SIN TACC</h5>
+                          <p>2X1</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>  
+            </section>
+
+        </main>
+        <!--TERMINA EL MAIN-->
+
+        <!--COMIENZA EL FOOTER-->
+        <footer class="footer">
+            <div class="medios-de-contacto">
+                <h6>Contactanos</h6>
+                <address>
+                    <ul>
+                        <li>AV CoderHouse 1234</li>
+                        <li>Provincia de Buenos Aires</li>
+                        <li>Telefono para pedidos: <a href="tel:+5491158699650">1558699650</a>
+                            <a href="https://wa.me/5491158699650" target="_blank"></a> 
+                            <img src="IMAGENES/whatsapp.svg" alt="whatsapp"></li>
+
+                        <li>
+                            <a href="https://facebook.com" target="_blank">
+                                <img src="IMAGENES/facebook.svg" alt="facebook">
+                            </a>   
+                            <a href="https://instagram.com" target="_blank">
+                                <img src="IMAGENES/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+
+                <h6>Horarios de atencion</h6>
+                <ul>
+                    <li>Lunes a Viernes 8 a 20 horas</li>
+                    <li>Sábados y Domingos 8 a 14 horas</li>
+                </ul>
+            </div>
+
+            <!--MAPA DENTRO DEL FOOTER-->
+            <iframe class="mapa"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.9131867208457!2d-58.401504425317384!3d-34.73258257290841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd6619d68d83%3A0xe935ae155a69cdb!2sRoca%20351%2C%20B1823EAD%20Remedios%20de%20Escalada%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1743633795584!5m2!1ses!2sar"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </footer>
+        <!--TERMINA EL FOOTER-->
+    </div>
+
+
+    <!-- Bootstrap Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

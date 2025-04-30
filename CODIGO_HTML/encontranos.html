@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CODIGO_CSS/styles.css">
+    <title>Contactanos</title>
+    <!--CARRITO MEDIANTE FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--CON ESTO CAMBIO EL ICONO DE LA WEB-->
+    <link rel="icon" type="image/png" href="../IMAGENES/CELIPLANET.png">
+
+</head>
+<body>
+    <!--COMIENZA EL HEADER-->
+      <header class="header">
+        <div class="titulo">
+            <h1>CELIPLANET</h1>
+            <p>soy celiaco, no extraterrestre</p>
+        </div>
+
+        <div class="logo">
+            <img src="../IMAGENES/LOGO2.jpg" alt="Logo de CeliPlanet">
+        </div>
+
+        <!-- CHECKBOX HAMBURGUESA -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label> <!-- Icono de hamburguesa -->
+
+        <nav id="menu-principal">
+            <ul>
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="recetas.html">RECETAS</a></li>
+                <li><a href="comprar.html">COMO COMPRAR</a></li>
+                <li><a href="encontranos.html">CONTACTANOS</a></li>
+            </ul>
+        </nav>
+
+        <div id="carrito">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+    <!--TERMINA EL HEADER-->
+
+    
+    <main>
+        <form>
+            <fieldset id="formulario">
+                <legend><h2>Contactanos</h2></legend>
+                <br><br>
+
+                <label for="nombre">Nombre</label>
+                <input placeholder="Escribe tu nombre" type="text" id="nombre" name="nombre" required>
+                <br><br>
+
+                <label for="email">Email</label>
+                <input type="email" placeholder="Escribe tu Email" id="email" name="email" required>
+                <br><br>
+
+                <label for="comentario">Dejanos tu consulta</label>
+                <textarea placeholder="Dejanos tu consulta" id="comentario" name="comentario" required></textarea>
+                <br><br>
+
+                <button type="submit" id="boton">Enviar</button>
+
+            </fieldset>    
+
+        </form>
+    </main>
+
+    
+    <!--AQUI COMIENZA EL FOOTER-->
+    <footer class="footer">
+       
+
+        <div class="medios-de-contacto">
+            <h6>Contactanos</h6>
+            <address>
+                <ul>
+                    <li>AV CoderHouse 1234</li>
+                    <li>Provincia de Buenos Aires</li>
+                    <li>telefono para pedidos: <a href="tel: +5491158699650">1558699650</a>
+                        <a href="https://wa.me/5491158699650" target="_blank"></a> 
+                        <img src="../IMAGENES/whatsapp.svg" alt="whatsapp"></li>
+                    
+                    <li>
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="../IMAGENES/facebook.svg" alt="facebook">
+                        </a>   
+                        <a href="https://instagram.com" target="_blank">
+
+                            <img src="../IMAGENES/instagram.svg" alt="instagram">
+                        </a>
+                    </li>
+                </ul>
+            </address>
+
+            <h6>Horarios de atencion</h6>
+            <ul>
+                <li>Lunes a Viernes 8 a 20 horas</li>
+                <li>Sabados y Domingos 8 a 14 horas</li>
+            </ul>
+
+            
+        </div>
+
+
+        <!--MAPA DENTRO DEL FOOTER-->
+        <iframe class="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.9131867208457!2d-58.401504425317384!3d-34.73258257290841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd6619d68d83%3A0xe935ae155a69cdb!2sRoca%20351%2C%20B1823EAD%20Remedios%20de%20Escalada%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1743633795584!5m2!1ses!2sar"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            
+        </iframe>
+
+
+    </footer>
+    <!--AQUI TERMINA EL FOOTER-->
+
+
+    
+
+</body>
+
+</html>

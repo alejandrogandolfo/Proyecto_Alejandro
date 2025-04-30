@@ -1,0 +1,448 @@
+/* --- ESTRUCTURA GENERAL CON GRID --- */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* --- HEADER --- */
+.header {
+    grid-area: header;
+    /*display: flex;
+    flex-wrap: wrap;*/
+    /*justify-content: space-between;
+    align-items: center;*/
+    padding: 10px;
+    
+}
+
+.titulo {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.titulo h1 {
+    color: brown;
+    margin: 0;
+}
+
+.titulo p {
+    font-weight: bold;
+    font-family: "Big Shoulders", sans-serif;
+    margin: 0;
+}
+
+.logo img {
+    width: 80px;
+    max-width: 100%;
+}
+
+/* --- MENÚ PRINCIPAL --- */
+#menu-principal {
+    background-color: cornflowerblue;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+#menu-principal ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-principal li {
+    margin: 0 15px;
+}
+
+#menu-principal a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#menu-principal li:hover{
+    background-color:darkcyan;
+    border-radius: 40%;
+    transform: translateY(5px);
+}
+
+#menu-principal a:hover{
+    color: antiquewhite;
+}
+
+/* ---------- CARRITO ---------- */
+#carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #00796b;
+}
+
+#carrito i {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+/* ---------- HAMBURGER MENU ---------- */
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    /*background-color: cornflowerblue; */
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* --- MAIN GRID --- */
+#grid-main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+        "categorias oferta oferta"
+        "novedades oferta oferta";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.categorias {
+    grid-area: categorias;
+    background-color: darkgray;
+    overflow: auto; /* para evitar que se desborde */
+    box-sizing: border-box; /* buena práctica */
+   
+    
+    
+}
+
+#listado-cat {
+     display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 10px;
+
+   
+} 
+
+.novedades {
+    grid-area: novedades;
+    background-color: bisque;
+    
+}
+
+
+
+.oferta {
+    grid-area: oferta;
+    background-color: chocolate;
+    text-align: center;
+    padding: 15px;
+}
+
+.oferta h2 {
+    text-align: center;
+    margin: 0;
+    
+}
+.Oferta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px; /*espacio sobre imagenes */
+    margin: 10px;
+}
+
+.Oferta img {
+    width: 30%; /* Aproximadamente 3 por fila con margen */
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    
+
+}
+
+.Novedades h2,
+.categorias h2 {
+    margin-top: 0;
+}
+
+/* --- FOOTER --- */
+.footer {
+    grid-area: footer;
+    background-color: black;
+    color: azure;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.medios-de-contacto {
+    flex: 1 1 300px;
+}
+
+.mapa {
+    flex: 1 1 300px;
+    min-height: 200px;
+    width: 100%;
+}
+
+.medios-de-contacto img {
+    filter: invert(1);
+    width: 30px;
+    margin: 0 5px;
+}
+
+
+.nosotros h3 {
+    color: red;
+}
+
+.nosotros p {
+    font-weight: bold;
+}
+
+.resaltado {
+    color: red; 
+    font-weight: bold; 
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 100px;
+}
+
+.videos iframe {
+    width: 100%;
+    height: 200px;
+}
+
+/* ---------- RECETA ---------- */
+.contenedordereceta {
+    text-align: center;
+}
+
+#receta {
+    color: brown;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline;
+    border-radius: 10px;
+}
+
+#recetasmain {
+    background-image: url("../IMAGENES/receta_fondo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ---------- FORMULARIO ---------- */
+form {
+    background-color: burlywood;
+}
+
+#formulario {
+    width: 50%;
+    margin: 4px auto;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: cadetblue;
+}
+
+#nombre:focus {
+    background-color: black;
+    color: aliceblue;
+}
+
+#email:focus {
+    background-color: black;
+    color: aliceblue;
+}
+
+#comentario:focus {
+    background-color: black;
+    color: aliceblue;
+}
+
+#boton:hover{
+    background-color: aliceblue;
+    transform: translateX(10px);
+}
+
+#boton:active{
+    background-color: crimson;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+}
+
+#listado-cat li:hover {
+    transform: translateX(-5px);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.Oferta img:hover{
+    border: 5px solid black;
+    width: 31%;
+}
+
+
+/* --- RESPONSIVE MOBILE Y TABLET --- */
+@media (max-width: 768px) {
+    /* HEADER */
+
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        align-items: center;
+        position: relative;
+       
+    }
+
+    .logo {
+        order: 2;
+        flex: 0 0 auto;
+    }
+
+    .logo img {
+        width: 30%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    /* MENÚ HAMBURGUESA */
+    .hamburger {
+        order: 2;
+        display: block;
+        font-size: 2rem;
+        
+        cursor: pointer;
+        padding: 10px;
+        margin-left: auto; /* Alineado a la derecha */
+        z-index: 2;
+        position: relative;
+    }
+
+    .titulo {
+        order: 1;
+        flex: 1 1 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+
+    #menu-principal {
+        order: 2;
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px; /* para que quede separado del botón hamburguesa */
+        position: static; /* o simplemente quitá 'position' */
+        background-color: aliceblue;
+    }
+
+    #menu-toggle:checked + .hamburger + #menu-principal {
+        display: block;
+        
+
+    }
+
+    #menu-principal ul {
+        flex-direction: column;
+        align-items: center;
+       
+    }
+
+    /* MAIN de index */
+    #grid-main {
+        grid-template-areas:
+            "categorias"
+            "novedades"
+            "oferta";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    #listado-cat {
+       font-size: 20px;
+       gap: 5px;
+       font-weight: bold;
+       color: crimson;
+
+    } 
+
+    .categorias,
+    .novedades,
+    .oferta {
+        padding: 10px;
+    }
+
+    .Oferta img {
+        width: 80%; /* Aproximadamente 3 por fila con margen */
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        
+    
+    }
+
+    .Oferta img:hover{
+        border: 5px solid black;
+        width: 80%;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mapa {
+        height: 200px;
+    }
+
+    /* FORMULARIO */
+    #formulario {
+        width: 60%;
+    }
+
+    /* VIDEOS */
+    .videos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 40px;
+    }
+
+
+    #formulario {
+        width: 20%;
+        margin: 2px auto;
+        text-align: center;
+        padding: 50px;
+        border: 5px solid black;
+        background-color: cadetblue;
+    }
+
+}
