@@ -12,10 +12,6 @@
 /* --- HEADER --- */
 .header {
     grid-area: header;
-    /*display: flex;
-    flex-wrap: wrap;*/
-    /*justify-content: space-between;
-    align-items: center;*/
     padding: 10px;
     
 }
@@ -101,7 +97,6 @@
 .hamburger {
     display: none;
     font-size: 2rem;
-    /*background-color: cornflowerblue; */
     text-align: center;
     cursor: pointer;
     padding: 10px;
@@ -122,10 +117,15 @@
 
 .categorias {
     grid-area: categorias;
-    background-color: darkgray;
-    overflow: auto; /* para evitar que se desborde */
-    box-sizing: border-box; /* buena práctica */
-   
+    background-color: #3b3f45;
+    overflow: auto; 
+    box-sizing: border-box; 
+    width: 250px;
+    height: 800px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
     
     
 }
@@ -134,14 +134,25 @@
      display: flex;
     list-style: none;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
 
-   
-} 
+#listado-cat li {
+  display: block;
+  padding: 10px 15px;
+  background-color: #3b3f45;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+}
 
 .novedades {
     grid-area: novedades;
-    background-color: bisque;
+    background-color: aliceblue;
     
 }
 
@@ -149,7 +160,7 @@
 
 .oferta {
     grid-area: oferta;
-    background-color: chocolate;
+    background-color: antiquewhite;
     text-align: center;
     padding: 15px;
 }
@@ -177,10 +188,15 @@
 
 }
 
-.Novedades h2,
+
 .categorias h2 {
     margin-top: 0;
 }
+
+.carousel-img {
+    height: 400px;         /* Tamaño más chico */
+    object-fit: cover;     /* Recorta sin deformar */
+  }
 
 
 /* --- FOOTER --- */
@@ -326,6 +342,44 @@
   .card-link:hover {
     background-color: #0056b3;
   }
+
+
+/* ----------NOSOTROS ------------ */
+.main-nosotros {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .nosotros-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nosotros-texto h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .nosotros-texto h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    color: #16a085;
+  }
+  
+  .nosotros-texto p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 0.5rem;
+    color: #333;
+  }
   
  
 
@@ -459,18 +513,14 @@ form {
         grid-template-rows: auto;
     }
 
-    #listado-cat {
-       font-size: 20px;
-       gap: 5px;
-       font-weight: bold;
-       color: crimson;
-
-    } 
-
     .categorias,
     .novedades,
     .oferta {
         padding: 10px;
+    }
+
+    .categorias{
+        margin: 0 auto;
     }
 
     .Oferta img {
@@ -529,5 +579,13 @@ form {
         flex: 1 1 100%;
       }
     
+     
 
 }
+
+@media (max-width: 1250px) {
+    .carousel-img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
