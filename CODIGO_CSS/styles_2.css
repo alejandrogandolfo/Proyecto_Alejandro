@@ -1,0 +1,609 @@
+/* --- ESTRUCTURA GENERAL CON GRID --- */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* --- HEADER --- */
+.header {
+    grid-area: header;
+    padding: 10px;
+    
+}
+
+.titulo {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.titulo h1 {
+    color: brown;
+    margin: 0;
+}
+
+.titulo p {
+    font-weight: bold;
+    font-family: "Big Shoulders", sans-serif;
+    margin: 0;
+}
+
+.logo img {
+    width: 80px;
+    max-width: 100%;
+    animation: rebote-pelota 2s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rebote-pelota { /*esta animacion hace que rebote como una pelota nuestro icono de celiplanet*/
+    0%   { transform: translateY(0); }
+    20%  { transform: translateY(-100px); }
+    40%  { transform: translateY(0); }
+    55%  { transform: translateY(-60px); }
+    70%  { transform: translateY(0); }
+    80%  { transform: translateY(-30px); }
+    90%  { transform: translateY(0); }
+    95%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+
+
+
+/* --- MENÚ PRINCIPAL --- */
+#menu-principal {
+    background-color: cornflowerblue;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+#menu-principal ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-principal li {
+    margin: 0 15px;
+}
+
+#menu-principal a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#menu-principal li:hover{
+    background-color:darkcyan;
+    border-radius: 40%;
+    transform: translateY(5px);
+}
+
+#menu-principal a:hover{
+    color: antiquewhite;
+}
+
+/* ---------- CARRITO ---------- */
+#carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #00796b;
+}
+
+#carrito i {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+/* ---------- HAMBURGER MENU ---------- */
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* --- MAIN GRID --- */
+#grid-main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+        "categorias oferta oferta"
+        "novedades oferta oferta";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.categorias {
+    grid-area: categorias;
+    background-color: #3b3f45;
+    overflow: auto; 
+    box-sizing: border-box; 
+    width: 250px;
+    height: 800px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    
+    
+}
+
+#listado-cat {
+     display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+#listado-cat li {
+  display: block;
+  padding: 10px 15px;
+  background-color: #3b3f45;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+}
+
+.novedades {
+    grid-area: novedades;
+    background-color: aliceblue;
+    
+}
+
+
+
+.oferta {
+    grid-area: oferta;
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 15px;
+}
+
+.oferta h2 {
+    text-align: center;
+    margin: 0;
+    
+}
+.Oferta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px; /*espacio sobre imagenes */
+    margin: 10px;
+}
+
+.Oferta img {
+    width: 30%; /* Aproximadamente 3 por fila con margen */
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    
+
+}
+
+
+.categorias h2 {
+    margin-top: 0;
+}
+
+.carousel-img {
+    height: 400px;         /* Tamaño más chico */
+    object-fit: cover;     /* Recorta sin deformar */
+  }
+
+
+/* --- FOOTER --- */
+.footer {
+    grid-area: footer;
+    background-color: black;
+    color: azure;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.medios-de-contacto {
+    flex: 1 1 300px;
+}
+
+.mapa {
+    flex: 1 1 300px;
+    min-height: 200px;
+    width: 100%;
+}
+
+.medios-de-contacto img {
+    filter: invert(1);
+    width: 30px;
+    margin: 0 5px;
+}
+
+
+.nosotros h3 {
+    color: red;
+}
+
+.nosotros p {
+    font-weight: bold;
+}
+
+.resaltado {
+    color: red; 
+    font-weight: bold; 
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 100px;
+}
+
+.videos iframe {
+    width: 100%;
+    height: 200px;
+}
+
+/* ---------- RECETA ---------- */
+.contenedordereceta {
+    text-align: center;
+}
+
+#receta {
+    color: brown;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline;
+    border-radius: 10px;
+}
+
+#recetasmain {
+    background-image: url("../IMAGENES/receta_fondo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*----------COMO COMPRAR------------*/
+.main_comprar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .comprar {
+    flex: 1 1 60%;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .comprar h2 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .comprar ol {
+    padding-left: 1.5rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .resaltado {
+    font-weight: bold;
+    color: #d9534f;
+  }
+  
+  .tarjeta {
+    flex: 1 1 30%;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .card-subtitle {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+  }
+  
+  .card-text {
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-link {
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .card-link:hover {
+    background-color: #0056b3;
+  }
+
+
+/* ----------NOSOTROS ------------ */
+.main-nosotros {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .nosotros-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nosotros-texto h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .nosotros-texto h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    color: #16a085;
+  }
+  
+  .nosotros-texto p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 0.5rem;
+    color: #333;
+  }
+  
+ 
+
+/* ---------- FORMULARIO ---------- */
+form {
+    background-color: burlywood;
+}
+
+#formulario {
+    width: 50%;
+    margin: 4px auto;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: cadetblue;
+}
+
+#nombre:focus {
+    background-color: black;
+    color: aliceblue;
+}
+
+#email:focus {
+    background-color: black;
+    color: aliceblue;
+}
+
+#comentario:focus {
+    background-color: black;
+    color: aliceblue;
+}
+
+#boton:hover{
+    background-color: aliceblue;
+    transform: translateX(10px);
+}
+
+#boton:active{
+    background-color: crimson;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+}
+
+#listado-cat li:hover {
+    transform: translateX(-5px);
+    text-decoration: underline;
+    font-weight: bold;
+    
+}
+
+.Oferta img:hover{
+    border: 5px solid black;
+    width: 31%;
+}
+
+
+/* --- RESPONSIVE MOBILE Y TABLET --- */
+@media (max-width: 768px) {
+    /* HEADER */
+
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        align-items: center;
+        position: relative;
+       
+    }
+
+    .logo {
+        order: 2;
+        flex: 0 0 auto;
+    }
+
+    .logo img {
+        width: 30%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    /* MENÚ HAMBURGUESA */
+    .hamburger {
+        order: 2;
+        display: block;
+        font-size: 2rem;
+        
+        cursor: pointer;
+        padding: 10px;
+        margin-left: auto; /* Alineado a la derecha */
+        z-index: 2;
+        position: relative;
+    }
+
+    .titulo {
+        order: 1;
+        flex: 1 1 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+
+    #menu-principal {
+        order: 2;
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px; /* para que quede separado del botón hamburguesa */
+        position: static; /* o simplemente quitá 'position' */
+        background-color: aliceblue;
+    }
+
+    #menu-toggle:checked + .hamburger + #menu-principal {
+        display: block;
+        
+
+    }
+
+    #menu-principal ul {
+        flex-direction: column;
+        align-items: center;
+       
+    }
+
+    /* MAIN de index */
+    #grid-main {
+        grid-template-areas:
+            "categorias"
+            "novedades"
+            "oferta";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .categorias,
+    .novedades,
+    .oferta {
+        padding: 10px;
+    }
+
+    .categorias{
+        margin: 0 auto;
+    }
+
+    .Oferta img {
+        width: 80%; /* Aproximadamente 1 por fila con margen */
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        
+    
+    }
+
+    .Oferta img:hover{
+        border: 5px solid black;
+        width: 80%;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mapa {
+        height: 200px;
+    }
+
+    /* FORMULARIO */
+    #formulario {
+        width: 60%;
+    }
+
+    /* VIDEOS */
+    .videos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 40px;
+    }
+
+
+    #formulario {
+        width: 20%;
+        margin: 2px auto;
+        text-align: center;
+        padding: 50px;
+        border: 5px solid black;
+        background-color: cadetblue;
+    }
+
+    .main_comprar {
+        flex-direction: column;
+      }
+    
+      .comprar, .tarjeta {
+        flex: 1 1 100%;
+      }
+    
+     
+
+}
+
+@media (max-width: 1250px) {
+    .carousel-img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
