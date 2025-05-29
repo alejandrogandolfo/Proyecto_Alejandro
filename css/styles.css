@@ -221,10 +221,15 @@
 .footer .medios-de-contacto {
   flex: 1 1 300px;
 }
+
 .footer .medios-de-contacto img {
   filter: invert(1);
   width: 30px;
   margin: 0 5px;
+}
+
+.medios-de-contacto li{
+  list-style: none;
 }
 .footer .mapa {
   flex: 1 1 300px;
